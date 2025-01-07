@@ -1,0 +1,28 @@
+@import "../scss/bootstrap.scss";
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.roboto-black {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #990ae3;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
