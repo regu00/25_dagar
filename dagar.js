@@ -1,24 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const todayElement = document.getElementById('today');
-  const futureDateElement = document.getElementById('future-date');
+    const todayElement = document.getElementById('today');
+    const futureDateElement = document.getElementById('future-date');
 
-  const today = new Date();
-  const futureDate = addWorkdays(today, 25);
+    const today = new Date();
+    const futureDate = addWorkdays(today, 25);
 
-  todayElement.textContent = today.toLocaleDateString();
-  futureDateElement.textContent = futureDate.toLocaleDateString();
+    todayElement.textContent = today.toLocaleDateString("en-GB");
+    futureDateElement.textContent = futureDate.toLocaleDateString("en-GB");
+
+    
+    const dateInput = document.getElementById("dateInput");
+    const calcFutureDate = document.getElementById("calc-future-date");
+
+    dateInput.addEventListener("change", () => {
+        if (!dateInput.value) return;
+
+        const selectedDate = dateInput.value;
+        const selectedFutureDate = addWorkdays(selectedDate, 25);
+
+        calcFutureDate.textContent = selectedFutureDate.toLocaleDateString("en-GB");
+    });
+
 });
 
+
+
 function addWorkdays(startDate, workdays) {
-  let date = new Date(startDate);
-  let addedDays = 0;
-  //månad är -1! så 3 är april etc
-  const skipDates = [
-      { month: 3, days: [18, 19, 20, 21] },
-      { month: 4, days: [1, 14, 15] },
-      { month: 5, days: [6, 18, 19] },
-      { month: 9, days: [30] },
-      { month: 11, days: [23, 24, 25, 31] }
+    let date = new Date(startDate);
+    let addedDays = 0;
+    //månad är -1! så 3 är april etc
+    const skipDates = [
+        { month: 3, days: [18, 19, 20, 21] },
+        { month: 4, days: [1, 14, 15] },
+        { month: 5, days: [6, 18, 19] },
+        { month: 9, days: [30] },
+        { month: 11, days: [23, 24, 25, 31] }
   ];
 
   while (addedDays < workdays) {
