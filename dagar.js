@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function addWorkdays(startDate, workdays) {
   let date = new Date(startDate);
   let addedDays = 0;
-
+  //månad är -1! så 3 är april etc
   const skipDates = [
       { month: 3, days: [18, 19, 20, 21] },
-      { month: 4, days: [29] },
-      { month: 5, days: [6, 7, 8, 20, 21] },
-      { month: 11, days: [23, 24, 25, 26, 31] }
+      { month: 4, days: [1, 14, 15] },
+      { month: 5, days: [6, 18, 19] },
+      { month: 9, days: [30] },
+      { month: 11, days: [23, 24, 25, 31] }
   ];
 
   while (addedDays < workdays) {
