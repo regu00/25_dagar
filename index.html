@@ -17,15 +17,23 @@
       <div class="col-md-6">
         <div class="p-4 bg-white rounded text-center">
           <form>
-            <input type="date" id="dateInput" class="date-input">
-            <p class="roboto-regular">Dagar: <span id="days-between">XX</span></p>
+
+            <select id="calc-mode" class="form-select">
+            <option value="days">Arbetsdagar till..</option>
+            <option value="future">25 dagar från..</option>
+            </select>
+
+            <input type="date" id="date-input" class="date-input">
+
+            <p class="roboto-regular">Resultat: <span id="days-function">XX</span></p>
+
           </form>
         </div>
       </div>
-      <div class="col-md-6 border-start">
+      <div class="col-md-6 border-start center">
         <div class="p-4 bg-white rounded text-center">
-          <p class="mt-4 roboto-regular">Idag: <span id="today"></span></p>
-          <p class="roboto-regular">Om 25 dagar: <span id="future-date"></span></p>
+          <p class="mt-4 roboto-regular pt-1">Idag: <span id="today"></span></p>
+          <p class="roboto-regular pt-2">Om 25 dagar: <span id="future-date"></span></p>
         </div>
       </div>
     </div>
