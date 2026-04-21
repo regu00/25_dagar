@@ -1,10 +1,8 @@
-@import "../scss/bootstrap.scss";
-
 .roboto-regular {
   font-family: "Roboto", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15.5px;
 }
 
 .roboto-black {
@@ -24,5 +22,27 @@ body {
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date-input{
+  font-family: "Roboto", sans-serif;
+  font-size: 13.1px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-width: 180px;
+  display: block;
+  margin: 15px auto;
+}
+
+.date-input:focus {
+  border-color: #990ae3;
+  box-shadow: 0 0 0 3px rgba(153, 10, 227, 0.2);
+}
+
+.date-input:hover {
+  border-color: #990ae3;
 }
 
